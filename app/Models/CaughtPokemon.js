@@ -11,9 +11,20 @@ export class CaughtPokemon {
 
     get CaughtPokemonTemplate() {
         return `
-<button onclick="('${this.id}')" class="btn btn-danger w-100 my-2">${this.name}</button>
+<button onclick="app.caughtPokemonsController.setCaughtPokemon('${this.id}')" class="btn btn-danger w-100 my-2">${this.name}</button>
 `
 
     }
 
+    get ActiveCaughtPokemonTemplate() {
+        return `
+        <div class="border rounded shadow text-center mt-5 pb-3">
+            <img class="pokemon-img" src="${this.img}" alt="">
+            <h1>${this.name}</h1>
+            <h3>Height: ${this.height} | Weight: ${this.weight}</h3>
+            <button onclick="app.caughtPokemonsController.catchPokemon()" class="btn btn-outline-warning mt-2 mdi mdi-pokeball"> </button>
+        </div>
+`
+
+    }
 }

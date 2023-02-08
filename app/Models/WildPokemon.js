@@ -9,10 +9,11 @@ export class WildPokemon {
 
 
     }
-    get ActivePokemonTemplate() {
+    get ActiveWildPokemonTemplate() {
         return `
         <div class="border rounded shadow text-center mt-5 pb-3">
             <img class="pokemon-img" src="${this.img}" alt="">
+            <h1>WILD POKEMON!!!!!!!</h1
             <h1>${this.name}</h1>
             <h3>Height: ${this.height} | Weight: ${this.weight}</h3>
             <button onclick="app.caughtPokemonsController.catchPokemon()" class="btn btn-outline-info mt-2 mdi mdi-pokeball"> Throw Pokeball</button>

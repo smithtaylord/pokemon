@@ -10,16 +10,16 @@ function _drawWildPokemons() {
     setHTML('wild-pokemon', template)
 }
 
-function _drawPokemon() {
+function _drawWildPokemon() {
     // @ts-ignore
-    setHTML('active-pokemon', appState.pokemon.ActivePokemonTemplate)
+    setHTML('active-pokemon', appState.wildPokemon.ActiveWildPokemonTemplate)
 }
 
 export class WildPokemonsController {
     constructor() {
         this.getWildPokemons()
         appState.on('wildPokemons', _drawWildPokemons)
-        appState.on('pokemon', _drawPokemon)
+        appState.on('wildPokemon', _drawWildPokemon)
     }
     async getWildPokemons() {
         try {

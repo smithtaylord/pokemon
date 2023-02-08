@@ -9,9 +9,11 @@ class AppState extends EventEmitter {
   /** @type {Object[]} */
   wildPokemons = []
   /** @type {import('./Models/WildPokemon').WildPokemon[] | null} */
-  pokemon = null
+  wildPokemon = null
   /** @type {import('./Models/CaughtPokemon').CaughtPokemon[]} */
-  caughtPokemon = []
+  caughtPokemons = []
+  /** @type {import('./Models/CaughtPokemon').CaughtPokemon[] | null} */
+  caughtPokemon = null
 }
 
 export const appState = new Proxy(new AppState(), {

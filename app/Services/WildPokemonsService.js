@@ -7,8 +7,8 @@ class WildPokemonsService {
         const res = await pokeApi.get(url)
         console.log('[get by url]', res.data);
         // @ts-ignore
-        appState.pokemon = new WildPokemon(res.data)
-        console.log('[looking at wildPokemon]', appState.pokemon);
+        appState.wildPokemon = new WildPokemon(res.data)
+        console.log('[looking at wildPokemon]', appState.wildPokemon);
 
     }
     async getWildPokemons() {

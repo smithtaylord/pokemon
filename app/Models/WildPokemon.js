@@ -15,7 +15,7 @@ export class WildPokemon {
             <img class="pokemon-img" src="${this.img}" alt="">
             <h1>${this.name}</h1>
             <h3>Height: ${this.height} | Weight: ${this.weight}</h3>
-            <button class="btn btn-outline-info mt-2 mdi mdi-pokeball"> Throw Pokeball</button>
+            <button onclick="app.caughtPokemonsController.catchPokemon()" class="btn btn-outline-info mt-2 mdi mdi-pokeball"> Throw Pokeball</button>
         </div>
 `
 

@@ -10,10 +10,16 @@ function _drawWildPokemons() {
     setHTML('wild-pokemon', template)
 }
 
+function _drawPokemon() {
+    // @ts-ignore
+    setHTML('active-pokemon', appState.pokemon.ActivePokemonTemplate)
+}
+
 export class WildPokemonsController {
     constructor() {
         this.getWildPokemons()
         appState.on('wildPokemons', _drawWildPokemons)
+        appState.on('pokemon', _drawPokemon)
     }
     async getWildPokemons() {
         try {
@@ -24,7 +30,14 @@ export class WildPokemonsController {
         }
     }
 
-    getPokemonByUrl
+    async getPokemonByUrl(url) {
+        try {
+            await wildPokemonsService.getPokemonByUrl(url)
+        } catch (error) {
+            Pop.error(error.message)
+            console.error(error)
+        }
+    }
 
 
 

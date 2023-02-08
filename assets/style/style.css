@@ -1,1 +1,10 @@
 /* BASIC STYLES HERE */
+.pokemon-img {
+    height: 30vh;
+    width: auto;
+}
+
+#wild-pokemon {
+    overflow: scroll;
+    height: 90vh;
+}

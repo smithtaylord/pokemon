@@ -18,6 +18,7 @@ function _drawWildPokemon() {
 export class WildPokemonsController {
     constructor() {
         this.getWildPokemons()
+
         appState.on('wildPokemons', _drawWildPokemons)
         appState.on('wildPokemon', _drawWildPokemon)
     }
@@ -38,7 +39,6 @@ export class WildPokemonsController {
             console.error(error)
         }
     }
-
 
 
 }

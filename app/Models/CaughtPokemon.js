@@ -22,7 +22,7 @@ export class CaughtPokemon {
             <img class="pokemon-img" src="${this.img}" alt="">
             <h1>${this.name}</h1>
             <h3>Height: ${this.height} | Weight: ${this.weight}</h3>
-            <button onclick="app.caughtPokemonsController.catchPokemon()" class="btn btn-outline-warning mt-2 mdi mdi-pokeball"> </button>
+            <button onclick="app.caughtPokemonsController.releasePokemon('${this.id}')" class="btn btn-outline-success mt-2 mdi mdi-tree"> Release Pokemon </button>
         </div>
 `
 
